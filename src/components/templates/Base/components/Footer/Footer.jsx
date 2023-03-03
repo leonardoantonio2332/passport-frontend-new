@@ -1,17 +1,17 @@
 import React from "react";
 import { Box, Typography, Container, Link, CssBaseline } from "@mui/material";
 
-const Copyright = () =>  {
+const Copyright = () => {
   return (
     <Typography variant="body2" color="text.secondary">
-      Copyright ©
+      {"Copyright © "}
       <Link color="inherit" href="https://www.ftec.com.br/">
         Uniftec
-      </Link>
+      </Link>{" "}
       {new Date().getFullYear()}.
     </Typography>
   );
-}
+};
 
 const Footer = () => {
   return (
