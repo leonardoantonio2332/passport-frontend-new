@@ -26,7 +26,7 @@ const Header = () => {
             {/* <MenuIcon /> */}
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Passport
+            NOME DO SISTEMA
           </Typography>
           <ModeToggle /*check={DarkMode} change={() => setDarkmode(!darkMode)}*/
           />
