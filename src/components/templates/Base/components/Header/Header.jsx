@@ -5,11 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import ModeToggle from "./ModeToggle";
-import { DarkMode } from "@mui/icons-material";
-import { Switch, FormControlLabel } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const Header = () => {
   return (
