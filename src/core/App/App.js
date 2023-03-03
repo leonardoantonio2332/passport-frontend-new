@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { main, users, cep, login } from "core/routes";
+import { main, users, cep, login, insertUser } from "core/routes";
 import { useDefineAxiosConfig } from "hooks";
 import { Base } from "components/templates";
 
 const App = () => {
   useDefineAxiosConfig();
-  const routes = [main, users, cep, login];
+  const routes = [main, users, cep, login, insertUser];
   return (
     <Router>
       <Routes>
