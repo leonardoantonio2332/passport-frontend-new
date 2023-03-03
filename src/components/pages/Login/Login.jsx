@@ -1,6 +1,3 @@
-// import React from "react";
-import { useNavigate } from "react-router-dom";
-import { useCpfFormater } from "hooks";
 import * as React from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -11,39 +8,14 @@ import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { fontSize } from "@mui/system";
 
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link
-        color="inherit"
-        href="https://www.unifteconline.com.br/"
-        target={"_blank"}
-      >
-        Uniftec
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
+import { Copyright } from "./components";
 
-const theme = createTheme();
 
-export default function Login() {
+const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -54,7 +26,7 @@ export default function Login() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -185,6 +157,8 @@ export default function Login() {
         </Box>
       </Container>
       <Copyright sx={{ mt: 5, mb: 4 }} />
-    </ThemeProvider>
+    </>
   );
 }
+
+export default Login;
