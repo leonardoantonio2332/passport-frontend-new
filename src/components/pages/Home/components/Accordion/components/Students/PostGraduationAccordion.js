@@ -45,21 +45,12 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
-const Employees = () => {
-  const [expanded, setExpanded] = React.useState("panel1");
-
-  const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
-
-  const Employees = () => {
-    return (
-      <Accordion
-        expanded={expanded === "panel2"}
-        onChange={handleChange("panel2")}
-      >
-        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography>Funcionários</Typography>
+const PostGraduationAccordion = () => {
+  return (
+    <div>
+      <Accordion>
+        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+          <Typography>Pós-Graduação</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <List>
@@ -67,22 +58,19 @@ const Employees = () => {
               component="a"
               href="https://ava.uniftec.com.br/moodle-login"
             >
-              <ListItemText primary="UNIC" />
+              <ListItemText primary="Moodle da Graduação" />
             </ListItem>
             <ListItem component="a" href="https://ecampus.ftec.com.br/login">
-              <ListItemText primary="Portal do Funcionário" />
+              <ListItemText primary="Portal do Aluno da Graduação" />
             </ListItem>
             <ListItem component="a" href="https://ecampus.ftec.com.br/login">
-              <ListItemText primary="Webmail" />
-            </ListItem>
-            <ListItem component="a" href="https://ecampus.ftec.com.br/login">
-              <ListItemText primary="Office 365 - Acesso" />
+              <ListItemText primary="Atividades Complementares" />
             </ListItem>
           </List>
         </AccordionDetails>
       </Accordion>
-    );
-  };
+    </div>
+  );
 };
 
-export default Employees;
+export default PostGraduationAccordion;
