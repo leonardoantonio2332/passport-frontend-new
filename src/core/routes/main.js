@@ -1,4 +1,4 @@
-import { NotFound, Users, Home } from "components/pages";
+import { NotFound, Home } from "components/pages";
 
 export const main = {
   basePath: "/",

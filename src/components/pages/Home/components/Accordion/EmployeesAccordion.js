@@ -1,6 +1,5 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
-import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
@@ -8,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
+import HailIcon from "@mui/icons-material/Hail";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -19,11 +19,12 @@ const Accordion = styled((props) => (
   "&:before": {
     display: "none",
   },
+  width: "100%", // adicionado para ajustar a largura do conteúdo
 }));
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+    expandIcon={<HailIcon sx={{ fontSize: "0.9rem" }} />}
     {...props}
   />
 ))(({ theme }) => ({
@@ -33,16 +34,21 @@ const AccordionSummary = styled((props) => (
       : "rgba(0, 0, 0, .03)",
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-    transform: "rotate(90deg)",
+    transform: "rotate(360deg)",
+    transition: "transform 1s",
   },
   "& .MuiAccordionSummary-content": {
     marginLeft: theme.spacing(1),
   },
+  width: "100%", // adicionado para ajustar a largura do conteúdo
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
   borderTop: "1px solid rgba(0, 0, 0, .125)",
+  width: "100%",
+  display: "flex",
+  flexDirection: "column", // adicionado para ajustar a largura do conteúdo
 }));
 
 const EmployeesAccordion = () => {

@@ -1,6 +1,5 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
-import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
@@ -11,6 +10,7 @@ import PostGraduationAccordion from "./components/Teachers/PostGraduationAccordi
 import TechnicalAccordion from "./components/Teachers/TechnicalAccordion";
 import AcademyAccordion from "./components/Teachers/AcademyAccordion";
 import EnglishAccordion from "./components/Teachers/EnglishAccordion";
+import CoPresentIcon from "@mui/icons-material/CoPresent";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -22,11 +22,12 @@ const Accordion = styled((props) => (
   "&:before": {
     display: "none",
   },
+  width: "100%", // adicionado para ajustar ao tamanho do container
 }));
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+    expandIcon={<CoPresentIcon sx={{ fontSize: "0.8rem" }} />}
     {...props}
   />
 ))(({ theme }) => ({
@@ -36,16 +37,19 @@ const AccordionSummary = styled((props) => (
       : "rgba(0, 0, 0, .03)",
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-    transform: "rotate(90deg)",
+    transform: "rotate(360deg)",
+    transition: "transform 1s",
   },
   "& .MuiAccordionSummary-content": {
     marginLeft: theme.spacing(1),
   },
+  width: "100%", // adicionado para ajustar ao tamanho do container
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
   borderTop: "1px solid rgba(0, 0, 0, .125)",
+  width: "100%", // adicionado para ajustar ao tamanho do container
 }));
 
 const TeachersAccordion = () => {
@@ -56,24 +60,22 @@ const TeachersAccordion = () => {
   };
 
   return (
-    <div>
-      <Accordion
-        expanded={expanded === "panel3"}
-        onChange={handleChange("panel3")}
-      >
-        <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography>Professores</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <GraduationAccordion />
-          <EadGraduationAccordion />
-          <PostGraduationAccordion />
-          <TechnicalAccordion />
-          <AcademyAccordion />
-          <EnglishAccordion />
-        </AccordionDetails>
-      </Accordion>
-    </div>
+    <Accordion
+      expanded={expanded === "panel3"}
+      onChange={handleChange("panel3")}
+    >
+      <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
+        <Typography>Professores</Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        <GraduationAccordion />
+        <EadGraduationAccordion />
+        <PostGraduationAccordion />
+        <TechnicalAccordion />
+        <AcademyAccordion />
+        <EnglishAccordion />
+      </AccordionDetails>
+    </Accordion>
   );
 };
 export default TeachersAccordion;
