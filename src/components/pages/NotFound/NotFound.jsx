@@ -1,19 +1,29 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import { Button } from 'components/ux'
+import React from "react";
+import "./styles.css";
+import Button from "@mui/material/Button";
 
-const Users = () => {
-  const navigate = useNavigate()
+const NotFound = () => {
   return (
-    <div>
-      404
-      <br />
+    <div className="not-found">
+      <h1 className="title">404</h1>
+      <p className="subtitle">Página Não Encontrada</p>
       <Button
-        text="Voltar ao inicio"
-        onClick={() => navigate('/')}
-      />
+        href="/"
+        type="submit"
+        variant="contained"
+        sx={{
+          mt: 3,
+          mb: 2,
+          width: "300px",
+          height: "50px",
+        }}
+        size="medium"
+        style={{ backgroundColor: "#05998c" }}
+      >
+        Voltar para a página inicial
+      </Button>
     </div>
-  )
-}
+  );
+};
 
-export default Users
+export default NotFound;

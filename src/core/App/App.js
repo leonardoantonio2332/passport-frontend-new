@@ -1,12 +1,32 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { main, users, cep, login, insertUser, addUserGroup, createUserManually } from "core/routes";
+import {
+  main,
+  users,
+  cep,
+  login,
+  insertUser,
+  addUserGroup,
+  createUserManually,
+  updateEmail,
+  changePassword,
+} from "core/routes";
 import { useDefineAxiosConfig } from "hooks";
 import { Base } from "components/templates";
 
 const App = () => {
   useDefineAxiosConfig();
-  const routes = [main, users, cep, login, insertUser, addUserGroup, createUserManually];
+  const routes = [
+    main,
+    users,
+    cep,
+    login,
+    insertUser,
+    addUserGroup,
+    createUserManually,
+    updateEmail,
+    changePassword,
+  ];
   return (
     <Router>
       <Routes>

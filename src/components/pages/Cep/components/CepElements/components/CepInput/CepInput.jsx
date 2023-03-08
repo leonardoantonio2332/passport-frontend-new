@@ -1,19 +1,14 @@
-import React, { useEffect } from 'react'
-import { useCepFetcher } from 'services'
-import { useAddress } from 'contexts'
+import React, { useEffect } from "react";
+import { useCepFetcher } from "services";
+import { useAddress } from "contexts";
 
 const CepInput = () => {
-  const { setAddress } = useAddress()
-  const {
-    cep,
-    setCep,
-    addressData,
-    handleQueryCep
-  } = useCepFetcher()
+  const { setAddress } = useAddress();
+  const { cep, setCep, addressData, handleQueryCep } = useCepFetcher();
 
   useEffect(() => {
-    setAddress(addressData)
-  }, [addressData])
+    setAddress(addressData);
+  }, [addressData]);
 
   return (
     <div>
@@ -25,7 +20,7 @@ const CepInput = () => {
       />
       <button onClick={handleQueryCep}>Consultar</button>
     </div>
-  )
-}
+  );
+};
 
-export default CepInput
+export default CepInput;
