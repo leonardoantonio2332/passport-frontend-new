@@ -1,0 +1,45 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 10rem;
+  font-weight: bold;
+  color: #d6d6d6;
+  text-shadow: 1px 1px #888;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #666;
+  margin: 0 0 2rem 0;
+}
+
+.image {
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.button {
+  background-color: #008cba;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #00698c;
+}

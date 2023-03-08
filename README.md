@@ -68,3 +68,54 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+passport-frontend
+This is the frontend project for Passport.
+
+Project Details
+Version: 0.1.0
+Private: true
+Description: This project was bootstrapped with Create React App.
+Dependencies
+"@emotion/react": "^11.10.6"
+"@emotion/styled": "^11.10.6"
+"@mui/base": "^5.0.0-alpha.119"
+"@mui/icons-material": "^5.11.11"
+"@mui/material": "^5.11.11"
+"@mui/styled-engine-sc": "^5.11.11"
+"@mui/styles": "^5.11.11"
+"@mui/system": "^5.11.11"
+"@testing-library/jest-dom": "^5.16.5"
+"@testing-library/react": "^13.4.0"
+"@testing-library/user-event": "^13.5.0"
+"axios": "^1.3.4"
+"react": "^18.2.0"
+"react-dom": "^18.2.0"
+"react-input-mask": "^2.0.4"
+"react-router-dom": "^6.8.2"
+"react-scripts": "5.0.1"
+"styled-components": "^5.3.8"
+"web-vitals": "^2.1.4"
+Scripts
+"start": "react-scripts start"
+"build": "react-scripts build"
+"test": "react-scripts test"
+"eject": "react-scripts eject"
+ESLint Configuration
+"extends": [
+"react-app",
+"react-app/jest"
+]
+Browserslist
+"production": [
+">0.2%",
+"not dead",
+"not op_mini all"
+],
+"development": [
+"last 1 chrome version",
+"last 1 firefox version",
+"last 1 safari version"
+]
+License
+This project is licensed under the ISC License.

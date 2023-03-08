@@ -5,3 +5,5 @@ export * from "./login";
 export * from "./insertUser";
 export * from "./addUserGroup";
 export * from "./createUserManually";
+export * from "./updateEmail";
+export * from "./changePassword";
