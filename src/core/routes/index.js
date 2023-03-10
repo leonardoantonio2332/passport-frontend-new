@@ -7,3 +7,5 @@ export * from "./addUserGroup";
 export * from "./createUserManually";
 export * from "./updateEmail";
 export * from "./changePassword";
+export * from "./myLibrary";
+export * from "./userQuery";
