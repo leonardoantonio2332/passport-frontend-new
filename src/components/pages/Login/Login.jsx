@@ -14,7 +14,6 @@ import Container from "@mui/material/Container";
 
 import { Copyright } from "./components";
 
-
 const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -159,6 +158,6 @@ const Login = () => {
       <Copyright sx={{ mt: 5, mb: 4 }} />
     </>
   );
-}
+};
 
 export default Login;

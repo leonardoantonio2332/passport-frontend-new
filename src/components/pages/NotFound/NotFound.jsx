@@ -14,8 +14,6 @@ const NotFound = () => {
         sx={{
           mt: 3,
           mb: 2,
-          width: "300px",
-          height: "50px",
         }}
         size="medium"
         style={{ backgroundColor: "#05998c" }}

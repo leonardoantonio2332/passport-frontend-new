@@ -10,6 +10,8 @@ import {
   createUserManually,
   updateEmail,
   changePassword,
+  myLibrary,
+  userQuery,
 } from "core/routes";
 import { useDefineAxiosConfig } from "hooks";
 import { Base } from "components/templates";
@@ -26,6 +28,8 @@ const App = () => {
     createUserManually,
     updateEmail,
     changePassword,
+    myLibrary,
+    userQuery,
   ];
   return (
     <Router>
